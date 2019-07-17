@@ -1,0 +1,27 @@
+@(title: String, scripts: Html = Html(""))(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/copter.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        @scripts
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/">Home</a>
+                    <a class="brand" href="/profilePets">Pets</a>
+                    <a class="brand" href="/profileOwners">Owner</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        @content
+        </div>
+    </body>
+</html>
